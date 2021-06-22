@@ -72,7 +72,6 @@ fn main() {
     let mut window =
         minifb::Window::new("hist", WIN_WIDTH, WIN_HEIGHT, WindowOptions::default()).unwrap();
 
-    print!("aaa");
     while window.is_open() && !window.is_key_down(Key::Escape) {
         let _ = window.update_with_buffer(buf.borrow(), WIN_WIDTH, WIN_HEIGHT);
     }
