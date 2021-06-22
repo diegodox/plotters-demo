@@ -1,0 +1,9 @@
+[package]
+name = "plotters-minfb-demo"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+plotters = "*"
+plotters-bitmap = "*"
+minifb = "*"
