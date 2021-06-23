@@ -49,16 +49,16 @@ fn main() {
             .unwrap();
         chart.configure_axes().draw().unwrap();
         let _ = chart.draw_series(
-            (0..WIDTH - 1)
-                .flat_map(|x| std::iter::repeat(x).zip(0..HEIGHT - 1))
+            (0..WIDTH)
+                .flat_map(|x| std::iter::repeat(x).zip(0..HEIGHT))
                 .map(|(x, z)| {
                     let v = |x: usize, z: usize| *hist.get(x, z).unwrap();
                     Polygon::new(
                         vec![
                             (x as f64, v(x, z), z as f64),
-                            (x as f64 + 1.0, v(x + 1, z), z as f64),
-                            (x as f64, v(x, z + 1), z as f64 + 1.0),
-                            (x as f64 + 1.0, v(x + 1, z + 1), z as f64 + 1.0),
+                            (x as f64 + 1.0, v(x, z), z as f64),
+                            (x as f64, v(x, z), z as f64 + 1.0),
+                            (x as f64 + 1.0, v(x, z), z as f64 + 1.0),
                         ],
                         &BLUE.mix(0.3),
                     )

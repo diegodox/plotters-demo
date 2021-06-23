@@ -1,3 +1,3 @@
-# plotters + minfib, 3d graph demo
+# plotters + minifb, 3d graph demo
 
 ![screenshot](screenshot.png)
